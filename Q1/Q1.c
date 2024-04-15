@@ -3,7 +3,8 @@
 #include <stdio.h>
 void keyword(char str[10])
 {
-    if (strcmp("for", str) == 0 || strcmp("while", str) == 0 || strcmp("do", str) == 0 || strcmp("int", str) == 0 || strcmp("float", str) == 0 || strcmp("char", str) == 0 || strcmp("double", str) == 0 || strcmp("static", str) == 0 || strcmp("switch", str) == 0 || strcmp("case", str) == 0)
+    if (strcmp("for", str) == 0 || strcmp("while", str) == 0 || strcmp("do", str) == 0 || strcmp("int", str) == 0 || strcmp("float", str) == 0 || strcmp("char", str) == 0 || strcmp("double", str) == 0 ||
+        strcmp("static", str) == 0 || strcmp("switch", str) == 0 || strcmp("case", str) == 0)
         printf("\n%s is a keyword", str);
     else
         printf("\n%s is an identifier", str);
@@ -13,7 +14,7 @@ int main()
     FILE *f1, *f2, *f3;
     char c, str[10], st1[10];
     int num[100], lineno = 0, tokenvalue = 0, i = 0, j = 0, k = 0;
-    printf("\nEnter the c Program: "); /*gets(st1);*/
+    printf("\nEnter the c program: "); /*gets(st1);*/
     f1 = fopen("input", "w");
     while ((c = getchar()) != EOF)
         putc(c, f1);
@@ -57,13 +58,13 @@ int main()
     fclose(f2);
     fclose(f3);
     fclose(f1);
-    printf("\nThe no's in the program are");
+    printf("\nThe no's in the program are: ");
     for (j = 0; j < i; j++)
-        printf("%d", num[j]);
+        printf("%d ", num[j]);
     printf("\n");
     f2 = fopen("identifier", "r");
     k = 0;
-    printf("The keywords and identifiersare:");
+    printf("The keywords and identifiers are: ");
     while ((c = getc(f2)) != EOF)
     {
         if (c != ' ')
@@ -77,11 +78,10 @@ int main()
     }
     fclose(f2);
     f3 = fopen("specialchar", "r");
-    printf("\nSpecial characters are");
+    printf("\nSpecial characters are: ");
     while ((c = getc(f3)) != EOF)
-        printf("%c", c);
+        printf("%c ", c);
     printf("\n");
     fclose(f3);
-    printf("Total no. of lines are:%d", lineno);
-    return 0;
+    printf("Total no. of lines are: %d", lineno);
 }
