@@ -4,3 +4,5 @@ gcc lex.yy.c q10.tab.c -w
 .\a.exe
 4+5
 9
+4*5
+20
