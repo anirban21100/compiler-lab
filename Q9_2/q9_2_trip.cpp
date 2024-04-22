@@ -1,13 +1,3 @@
-/*
-Q2.Write  a  program in  C to  find  three  address  codeusing  triples for  the following set of input expression: a = b * �c + b * �c.
-
-
-Name:Karn Kumar Singh
-Roll No:1906181
-course code:CSL5404
-
-
-*/
 #include <iostream>
 using namespace std;
 

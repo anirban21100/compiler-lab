@@ -3,6 +3,18 @@
 #include <string.h>
 int label[20];
 int no = 0;
+
+int check_label(int k)
+{
+    int i;
+    for (i = 0; i < no; i++)
+    {
+        if (k == label[i])
+            return 1;
+    }
+    return 0;
+}
+
 int main()
 {
     FILE *fp1, *fp2;
@@ -118,15 +130,5 @@ int main()
         printf("%c", ch);
     } while (ch != EOF);
     fclose(fp1);
-    return 0;
-}
-int check_label(int k)
-{
-    int i;
-    for (i = 0; i < no; i++)
-    {
-        if (k == label[i])
-            return 1;
-    }
     return 0;
 }

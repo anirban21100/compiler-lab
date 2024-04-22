@@ -82,3 +82,5 @@ void main()
     }
     getch();
 }
+
+// id+id*id-id
